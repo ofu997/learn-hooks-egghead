@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 
-export function Playground1() {
+export function Playground() {
   const [text, setText] = useState("");
   const [checked, setChecked] = useState(false);
+  const handleCheckboxToggle = e => {
+    // setChecked(checked===true? false : true)
+    setChecked(!checked);
+  }
   return (
     <section>
       <input type="text" value={text} onChange={e => setText(e.target.value)} />
@@ -11,6 +15,11 @@ export function Playground1() {
         checked={checked}
         onChange={e => setChecked(e.target.checked)}
       />
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={handleCheckboxToggle}
+      />      
       <ul>
         <li>{text}</li>
         <li>{checked.toString()}</li>
@@ -19,4 +28,4 @@ export function Playground1() {
   );
 }
 
-export default Playground1;
+export default Playground;

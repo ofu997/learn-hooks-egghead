@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 // import Playground from './Playground/Playground1';
-import Playground from './Playground/Playground2';
+// import Playground from './Playground/Playground2';
+import Playground from './Todo/TodoList.func.js';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
